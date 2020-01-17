@@ -42,3 +42,17 @@ Source Code using Numpy:
         if elem[1]==1:
             print(elem[0]);
             break;
+
+### Another solution
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+import collections as collections;
+
+def solution(A):
+    if len(A)==0:
+        return 0;
+    freq=collections.Counter(A) ;
+    #print(freq)
+    for key, value in freq.items():
+        if value==1:
+            return key
