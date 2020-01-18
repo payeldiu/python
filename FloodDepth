@@ -60,11 +60,13 @@ def solution(A):
                 res=m-d-b[0];
         if m>x:
             b.append(x); 
-        
-    if d==m:
-      if(len(b)!=0):
-        b.sort();
-        res=b[1]-b[0];
+    if(len(A)-len(b)==1):
+        res=0;
+    else:    
+        if d==m:
+          if(len(b)!=0):
+            b.sort();
+            res=b[1]-b[0];
 
     return res;
     
