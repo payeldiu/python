@@ -1,0 +1,30 @@
+#https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+phonebook= dict()
+serchName=[]
+
+n=int(input().strip())
+
+if(n>=1 and n<=100000):
+        for x in range(n):
+            x= input().strip()
+            listx = list(x.split(' '))
+            phonebook[listx[0]] = listx[1]
+        try:    
+            while True:
+                inp = input().strip()
+                if inp != "":
+                    serchName.append(inp)
+                else:
+                    break
+        except EOFError:
+            pass
+
+        for i in serchName:
+            if i in phonebook:
+                print(i+'='+phonebook[i]);
+            else:
+                print("Not found")  
+    
